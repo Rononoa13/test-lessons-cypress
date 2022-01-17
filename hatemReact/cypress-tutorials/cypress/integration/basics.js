@@ -1,14 +1,31 @@
+/// <reference types="cypress" />
+
 describe("Login Feature Test", () => {
-    
-    it("should visit the login page correctly", function(){
-        cy.log("testcase1: should visit the website correctly ")
+
+    //Hooks
+
+    before(function() {
+        cy.log("Run the server locally") 
     })
-    
-    it("should log I love cypress", () => {
-        cy.log("testcase1: I love cypress ")
+
+    after(function(){
+        cy.log("Kill the server")
+    })
+
+    beforeEach(function() {
+        cy.log("Navigate to login page")
+    })
+
+    it("should visit the login page correctly", () => {
+        
+        cy.log("testcase1: should visit the website correctly ")
+        
+    })
+
+    it("should be able to login", () => {
+        
+        cy.log("FIll the username and the password and login")
+        cy.log("should navigate the login page")
+        
     })
 })
-
-
-
-
