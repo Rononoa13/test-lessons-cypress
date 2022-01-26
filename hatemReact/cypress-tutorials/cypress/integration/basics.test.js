@@ -14,24 +14,17 @@ describe("Login Feature Test", () => {
 
         it("should visit the login page correctly on ", () => {
             cy.visit("cypress/index.html")
-            // cy.get('.header-1.main')
-            // cy.get('.list1.web')
-            // cy.get('.course-list > .list1')
-            // cy.get('.course-list').children('.list1')
-            // cy.get('li').first()
-            // cy.get('li').last()
-            // cy.get('li').eq(21)
-            // cy.get('li').filter('.mobile')
-            // cy.get('li').filter('.web')
+            // cy.get('[data-cy="email"]').type("test@123.com")
+            // cy.get('[data-cy="password"]').type("12345")
+            // cy.get('[data-cy="check-remember"]').click()
+            // cy.get('[data-cy="sign-in"]').click()
 
-            // cy.get('.list1.web').nextAll()
-
-            // cy.contains('Selenium')
-            // cy.get('[attribute="value"]')
-            cy.get('[data-cy="selenium-course"]')
-            cy.get('.list3', {timeout:30000})
-
-
+            cy.get('[type="radio"]').check()
+            cy.wait(4000)
+            cy.fixture('example').then(example => {
+                cy.log(example)
+            })
+            // cy.get('[type="radio"]').uncheck()
         })
         /**
          * Automation = Find elements + actions + Assertions.
